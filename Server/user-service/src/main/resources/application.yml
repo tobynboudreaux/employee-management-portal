@@ -1,21 +1,8 @@
-#server:
-#  port: 9002
-#
-#spring:
-#  application:
-#    name: USER-SERVICE
-#  zipkin:
-#    base-url: http://127.0.0.1:9411/
-#  jpa:
-#    database: postgresql
-#    show-sql: true
-#    hibernate:
-#      ddl-auto: update
-#    properties:
-#      default_schema: employee
-#  datasource:
-#    url: ${DB_URL}
-#    username: ${DB_USERNAME}
-#    password: ${DB_PASSWORD}
-#    driverClassName: org.postgresql.Driver
-      
+server:
+  port: 9002
+
+spring:
+  application:
+    name: USER-SERVICE
+  zipkin:
+    base-url: http://127.0.0.1:9411/

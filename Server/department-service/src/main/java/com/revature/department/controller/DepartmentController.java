@@ -6,7 +6,6 @@ import com.revature.department.entity.Department;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "http://localhost:3000/*")
 @RestController
 @RequestMapping("/departments")
 @Slf4j
@@ -28,7 +26,7 @@ public class DepartmentController {
         log.info("Inside saveDepartment method of DepartmentController");
         return departmentService.saveDepartment(department);
     }
-    
+
     @GetMapping("/{id}")
     public Department findDepartmentById(@PathVariable("id") Long departmentId) {
         log.info("Inside findDepartmentById method of DepartmentController");
