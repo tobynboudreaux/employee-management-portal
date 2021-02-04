@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, {useEffect, useState} from 'react';
+import {useState} from 'react';
 import UserData from '../Views/UserData';
 
 const Users = () => {
@@ -11,7 +11,7 @@ const Users = () => {
     const getUser = async (id) => {
         try {
             await axios.get(getUsersUrl+id)
-                .then(resp => (setState(resp.data)));
+            .then(resp => (setState(resp.data)));
         } catch {
             setState(catchString);
         }
@@ -21,7 +21,8 @@ const Users = () => {
     return (
         <div className="userContainer">
             {console.log(state.user)}
-            <h1>User</h1>
+            <h1>Users</h1>
+            <label htmlFor="userId">ID #:</label>
             <input type="text" placeholder="Enter an ID number" id="userId" onChange={e => (getUser(e.target.value))}/>
             <table className="table table-dark table-striped" id="user-table">
                 <thead>
