@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 
-const addUserUrl = 'http://localhost:9191/users/';
+const addUserUrl = 'http://localhost:9002/users/';
 
 export default class AddUser extends React.Component {
 
@@ -25,11 +25,13 @@ export default class AddUser extends React.Component {
         }
 
         handleSubmit(event) {
-            //event.preventDefault();
-            axios.post(
-                addUserUrl,
-                this.state
-            ).then(resp => console.log(resp));
+            event.preventDefault();
+            axios({
+                url: addUserUrl,
+                method: "post",
+                data: this.state,
+                mode: "no-cors"
+            }).then(resp => console.log(resp));
         }
 
         render() {
