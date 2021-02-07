@@ -5,7 +5,7 @@ const Homepage = () => {
                 <div id="showcase-content">
                 </div>
                 <div className="form-container">
-                    <h1>Welcome</h1>
+                    <h1>Employee Management Portal</h1>
                 </div>
             </div>
         </div>
