@@ -23,14 +23,12 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/")
     public Department saveDepartment(@RequestBody Department department) {
         log.info("Inside saveDepartment method of DepartmentController");
         return departmentService.saveDepartment(department);
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/{id}")
     public Department findDepartmentById(@PathVariable("id") Long departmentId) {
         log.info("Inside findDepartmentById method of DepartmentController");

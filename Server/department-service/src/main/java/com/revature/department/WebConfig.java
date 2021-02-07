@@ -1,4 +1,4 @@
-package com.revature.user;
+package com.revature.department;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
