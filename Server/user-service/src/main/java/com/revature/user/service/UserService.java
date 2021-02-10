@@ -38,4 +38,12 @@ public class UserService {
 
         return vo;
     }
+
+    public User updateUser(Long id, User userObj) {
+        User user = userRepository.findByUserId(id);
+        user.setFirstName(userObj.getFirstName());
+        user.setLastName(userObj.getLastName());
+        //etc
+        return userRepository.save(user);
+    }
 }

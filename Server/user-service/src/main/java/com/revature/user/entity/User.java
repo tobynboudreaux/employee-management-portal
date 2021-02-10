@@ -22,4 +22,20 @@ public class User {
     private String lastName;
     private String email;
     private Long departmentId;
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public void setFirstName(String name) {
+        this.firstName = name;
+    }
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    public void setLastName(String name) {
+        this.lastName = name;
+    }
 }
