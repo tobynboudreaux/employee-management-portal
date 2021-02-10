@@ -4,5 +4,8 @@
 #spring:
 #  application:
 #    name: DEPARTMENT-SERVICE
+<<<<<<< Updated upstream
 #  zipkin:
 #    base-url: http://127.0.0.1:9411/
+=======
+>>>>>>> Stashed changes

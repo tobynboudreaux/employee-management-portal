@@ -28,7 +28,11 @@ public class DepartmentController {
         log.info("Inside saveDepartment method of DepartmentController");
         return departmentService.saveDepartment(department);
     }
+<<<<<<< Updated upstream
     
+=======
+
+>>>>>>> Stashed changes
     @GetMapping("/{id}")
     public Department findDepartmentById(@PathVariable("id") Long departmentId) {
         log.info("Inside findDepartmentById method of DepartmentController");

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 
-const addDepartmentUrl = 'http://localhost:9191/departments/';
+const addDepartmentUrl = 'http://localhost:9001/departments/';
 
 export default class AddDepartment extends React.Component {
 
@@ -23,11 +23,21 @@ export default class AddDepartment extends React.Component {
         }
 
         handleSubmit(event) {
+<<<<<<< Updated upstream
             //event.preventDefault();
             axios.post(
                 addDepartmentUrl,
                 this.state
             ).then(resp => console.log(resp));
+=======
+            event.preventDefault();
+            axios.post({
+                url: addDepartmentUrl,
+                method: "post",
+                data: this.state,
+                mode: "no-cors"
+            }).then(resp => console.log(resp));
+>>>>>>> Stashed changes
         }
 
         render() {
